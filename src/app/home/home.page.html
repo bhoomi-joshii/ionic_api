@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Employee
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="addItem()">
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+
+    </ion-buttons>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+  <ion-button ion-button (click)="getData()"> Get Employee Data</ion-button>
+  
+  <!-- <ion-row>ID: {{result.id}} </ion-row> -->
+  
+  <ion-list>
+    <ion-item ng-repeat="result in result.result" >
+      
+      <h2>
+        {{result.id}}
+        {{result.title}}
+      </h2>
+     
+    </ion-item>
+  </ion-list>
+</ion-content>
